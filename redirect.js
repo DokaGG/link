@@ -1,8 +1,8 @@
 // Define the destination URLs
 var destinationURLs = {
-    "http://127.0.0.1:5500/link1": "www.destination1.url/example1",
-    "http://127.0.0.1:5500/link2": "www.destination2.url/example2",
-    "http://127.0.0.1:5500/link3": "www.destination3.url/example3"
+    "https://go.helalk.com/link1": "www.destination1.url/example1",
+    "https://go.helalk.com/link2": "www.destination2.url/example2",
+    "https://go.helalk.com/link3": "www.destination3.url/example3"
   };
   
   // Get the current URL
