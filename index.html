@@ -2,15 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Short Link Redirection</title>
 </head>
 <body>
-  <div id="redirect-container">
-    <h1>Redirecting...</h1>
-    <p>Please wait while you are redirected to the destination page.</p>
-  </div>
+  <script>
+    // Define the destination URLs for your short links
+    var links = {
+      "link1": "https://www.destination.url/example1",
+      "link2": "https://www.destination.url/example2",
+      // Add more short link and destination URL pairs as needed
+    };
 
-  <script src="redirect.js"></script>
+    // Extract the path from the current URL
+    var path = window.location.pathname;
+
+    // Remove the leading slash from the path
+    var shortLink = path.substring(1);
+
+    // Check if the short link exists in the links object
+    if (links.hasOwnProperty(shortLink)) {
+      // Redirect the user to the corresponding destination URL
+      window.location.href = links[shortLink];
+    } else {
+      // Display an error message or redirect to a default URL for invalid short links
+      window.location.href = "https://www.destination.url/default";
+    }
+  </script>
 </body>
 </html>
